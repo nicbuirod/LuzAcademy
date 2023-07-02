@@ -1,0 +1,32 @@
+.modal_container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.265);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.window_modal {
+  width: 50%;
+  height: 50%;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.close_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
