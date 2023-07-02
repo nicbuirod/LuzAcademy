@@ -29,11 +29,13 @@ const ButtonPay = () => {
     addUserCourse(idUSer, courseById._id);
   };
 
+  const invoice = `${courseById.name}${Date.now()}`;
+
   const data = {
     //Parametros compra (obligatorio)
     name: name,
     description: name,
-    invoice: "1234567563424",
+    invoice: invoice,
     currency: "cop",
     amount: price,
     tax_base: "0",

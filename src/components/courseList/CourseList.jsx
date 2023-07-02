@@ -3,8 +3,11 @@ import styles from "./course-list.module.scss";
 import CreateCourse from "./course/CreateCourse";
 import Button from "@mui/material/Button";
 import IconLV from "../../images/icono luz final.png";
+import { useNavigate } from "react-router-dom";
 
 const CourseList = () => {
+  const navigate = useNavigate();
+
   const [courseCount, setCourseCount] = useState(1);
   const [courseComponents, setCourseComponents] = useState([
     <CreateCourse key={0} />,
@@ -33,7 +36,9 @@ const CourseList = () => {
       <div className={styles.header_container}>
         <div className={styles.logo}>
           <img className={styles.icon} src={IconLV} alt="" />
-          <h2 className={styles.name_page}>Luz Vera</h2>
+          <h2 className={styles.name_page} onClick={() => navigate("/menu")}>
+            Luz Vera
+          </h2>
         </div>
       </div>
       <div className={styles.header_course}></div>
