@@ -66,8 +66,15 @@ const MenuAdmin = () => {
       <div className={styles.background_color}>
         <div className={styles.header_container}>
           <div className={styles.logo}>
-            <img className={styles.icon} src={IconLV} alt="" />
-            <h2 className={styles.name_page}>Luz Vera</h2>
+            <img
+              className={styles.icon}
+              src={IconLV}
+              alt=""
+              onClick={() => navigate("/")}
+            />
+            <h2 className={styles.name_page} onClick={() => navigate("/")}>
+              Luz Vera
+            </h2>
           </div>
           <Button
             variant="outlined"
@@ -90,7 +97,7 @@ const MenuAdmin = () => {
               <th className={styles.td_delete}>Eliminar</th>
             </tr>
           </div>
-          <div className={styles.courses_lis}>
+          <div className={styles.courses_list}>
             {list.map(({ name, price, _id }, index) => {
               return (
                 <tr key={index}>

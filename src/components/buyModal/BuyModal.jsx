@@ -30,13 +30,13 @@ const BuyModal = () => {
           <h2>{courseById.name}</h2>
 
           <p>{courseById.price}</p>
-          <Button
+          {/* <Button
             variant="outlined"
             className={styles.input_button}
             onClick={handleBuy}
           >
             Comprar
-          </Button>
+          </Button> */}
           <ButtonPay />
         </div>
       </div>
