@@ -29,42 +29,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Luz Academy
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Luz Academy is an application that allows administrators to easily publish and manage various video courses. This application also integrates a payment system through Epayco. Additionally, it offers users the ability to create an account with password protection and purchase available courses. Users can access a personal area to manage their purchased courses and track their progress. Luz Academy was developed using React on the front-end, Node.js on the back-end, and utilizes MongoDB as the database. During development, additional technologies and libraries such as Mongoose, Material UI, Sass, and Express were used.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application is hosted and can be accessed directly through the URL [luz.academy](https://luz.academy). Please note that in order for the application to load course information, the API service must be running. Also, if the URL of the available API changes, the service addresses in the application need to be updated accordingly.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The services target the following endpoints:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Endpoint         | HTTP Verb | Description                    |
+|------------------|-----------|--------------------------------|
+| User             | POST      | Create a new user              |
+| User/:id         | POST      | Add a course to a user         |
+| User/:id         | GET       | Get courses of a user          |
+| Course           | POST      | Create a new course            |
+| Course           | GET       | Get all courses                |
+| Course/:id       | GET       | Get a course by its ID         |
+| Course/:id       | PUT       | Update a course by its ID      |
+| Course/:id       | DELETE    | Delete a course by its ID      |
+| Class            | POST      | Create a new class             |
+| Class            | GET       | Get all classes                |
+| Class/:id        | GET       | Get a class by its course ID   |
